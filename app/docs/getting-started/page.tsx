@@ -10,7 +10,7 @@ export default function GettingStartedPage() {
       title: "Create Your Profile",
       description: "Set up your profile with your skills, experience, and career goals.",
       steps: [
-        "Sign up for a free Baby Collab account",
+        "Sign up for a free ConnectRUAS account",
         "Complete your profile with your background and interests",
         "Add your current skills and areas of expertise",
         "Set your career goals and aspirations"
@@ -59,9 +59,9 @@ export default function GettingStartedPage() {
           <span>/</span>
           <span className="text-foreground">Getting Started</span>
         </nav>
-        <h1 className="text-4xl font-bold text-foreground mb-4">Getting Started with Baby Collab</h1>
+        <h1 className="text-4xl font-bold text-foreground mb-4">Getting Started with ConnectRUAS</h1>
         <p className="text-xl text-muted-foreground">
-          Your step-by-step guide to setting up your Baby Collab account and beginning your career journey.
+          Your step-by-step guide to setting up your ConnectRUAS account and beginning your career journey.
         </p>
       </div>
 
@@ -148,7 +148,7 @@ export default function GettingStartedPage() {
       <div className="bg-primary/5 border border-primary/20 rounded-xl p-8 text-center">
         <h2 className="text-2xl font-bold text-foreground mb-4">Ready to Get Started?</h2>
         <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-          Join thousands of students and professionals already using Baby Collab to accelerate their careers.
+          Join thousands of students and professionals already using ConnectRUAS to accelerate their careers.
         </p>
         <Link 
           href="/sign-up" 

@@ -1,9 +1,9 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://babycollab.com/sitemap.xml
+Sitemap: https://connectruas.com/sitemap.xml
 
-Host: babycollab.com
+Host: connectruas.com
 
 
 Hey, just a suggestion from my side that is when someone enters a website

@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import getPrismaClient from '@/lib/db';
 
 // Hardcoded admin credentials as requested
-const ADMIN_EMAIL = 'admin@babycollab.com';
+const ADMIN_EMAIL = 'admin@connectruas.com';
 const ADMIN_PASSWORD = 'admin@123456';
 
 // POST /api/admin - Admin login to get feedback

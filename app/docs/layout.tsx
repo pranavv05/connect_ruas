@@ -16,7 +16,7 @@ export default function DocsLayout({
               <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-lg">BC</span>
               </div>
-              <span className="text-xl font-bold text-foreground">Baby Collab</span>
+              <span className="text-xl font-bold text-foreground">ConnectRUAS</span>
             </Link>
             <Link 
               href="/" 

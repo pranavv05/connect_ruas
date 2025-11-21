@@ -38,7 +38,7 @@ export default function PrivacyPage() {
 
         <div className="prose prose-card max-w-none">
           <p className="text-muted-foreground mb-6">
-            This Privacy Policy describes how Baby Collab ("we", "our", or "us") collects, uses, and shares your personal information 
+            This Privacy Policy describes how ConnectRUAS ("we", "our", or "us") collects, uses, and shares your personal information 
             when you use our website and services (collectively, the "Service").
           </p>
 
@@ -116,7 +116,7 @@ export default function PrivacyPage() {
             If you have any questions about this Privacy Policy, please contact us at:
           </p>
           <div className="bg-muted rounded-lg p-4">
-            <p className="text-foreground font-medium">privacy@babycollab.com</p>
+            <p className="text-foreground font-medium">privacy@connectruas.com</p>
           </div>
 
           <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Changes to This Policy</h2>

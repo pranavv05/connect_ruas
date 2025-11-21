@@ -46,10 +46,9 @@ export async function POST(req: NextRequest) {
       }
     });
     
-    // Send email notification to contactbabycollab@gmail.com
     try {
       // Check if email credentials are configured
-      const emailUser = process.env.EMAIL_USER || 'contactbabycollab@gmail.com';
+      const emailUser = process.env.EMAIL_USER || 'contactconnectruas@gmail.com';
       const emailPass = process.env.EMAIL_PASS;
       
       // Only attempt to send email if credentials are provided
@@ -67,7 +66,7 @@ export async function POST(req: NextRequest) {
         // Define email content
         const mailOptions = {
           from: emailUser,
-          to: 'contactbabycollab@gmail.com',
+          to: 'contactconnectruas@gmail.com',
           subject: `New Feedback Submission - ${feedbackType || 'General'}`,
           text: `
 New Feedback Submission:

@@ -106,12 +106,12 @@ export function Navigation() {
           >
             <Image 
               src="/logo.jpg" 
-              alt="Baby Collab Logo" 
+              alt="ConnectRUAS Logo" 
               width={40} 
               height={40} 
               className="rounded-lg" 
             />
-            <span className="text-lg sm:text-xl font-bold text-primary truncate">Baby Collab</span>
+            <span className="text-lg sm:text-xl font-bold text-primary truncate">ConnectRUAS</span>
           </Link>
           {isMobile && (
             <button 

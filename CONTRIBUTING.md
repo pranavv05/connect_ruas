@@ -1,6 +1,6 @@
-# Contributing to BabyCollab
+# Contributing to connectruas
 
-Thank you for your interest in contributing to BabyCollab! We welcome contributions from the community and are excited to see how you can help improve our platform.
+Thank you for your interest in contributing to connectruas! We welcome contributions from the community and are excited to see how you can help improve our platform.
 
 ## Table of Contents
 
@@ -166,4 +166,4 @@ If you have questions or need help, feel free to:
 - Reach out to the maintainers
 - Participate in our community events
 
-Thank you for contributing to BabyCollab!
+Thank you for contributing to connectruas!

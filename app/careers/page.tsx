@@ -80,14 +80,17 @@ export default function CareersPage() {
             <h2 className="text-2xl font-bold text-foreground mb-4">Our Mission</h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                At Baby Collab, we're on a mission to empower the next generation of professionals with the tools, 
-                resources, and community they need to succeed in their careers. We believe that everyone deserves 
-                access to quality career development resources, regardless of their background or circumstances.
+                At ConnectRUAS, our mission is to strengthen the RUAS student and alumni community by bringing 
+                mentorship, collaboration, and growth opportunities into one unified platform. We believe every 
+                student deserves access to guidance, real-world exposure, and a network that supports their academic 
+                and professional journey.
               </p>
+
               <p>
-                Our team is passionate about education, technology, and creating meaningful connections. 
-                We're looking for talented individuals who share our vision and want to make a difference 
-                in the lives of students and early professionals around the world.
+                Our team is committed to building tools that make learning, connecting, and collaborating easier for 
+                everyone — whether you're exploring career paths, seeking mentors, joining collaborations, or simply 
+                looking to grow alongside your peers. ConnectRUAS is built for the RUAS community, and we welcome 
+                passionate contributors who want to help shape the future of student–alumni engagement.
               </p>
             </div>
           </div>

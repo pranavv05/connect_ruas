@@ -38,7 +38,7 @@ export default function CookiesPage() {
 
         <div className="prose prose-card max-w-none">
           <p className="text-muted-foreground mb-6">
-            This Cookie Policy explains how Baby Collab ("we", "our", or "us") uses cookies and similar technologies 
+            This Cookie Policy explains how ConnectRUAS ("we", "our", or "us") uses cookies and similar technologies 
             to recognize you when you visit our website and services (collectively, the "Service").
           </p>
 
@@ -123,7 +123,7 @@ export default function CookiesPage() {
             If you have any questions about this Cookie Policy, please contact us at:
           </p>
           <div className="bg-muted rounded-lg p-4">
-            <p className="text-foreground font-medium">privacy@babycollab.com</p>
+            <p className="text-foreground font-medium">privacy@connectruas.com</p>
           </div>
         </div>
       </div>

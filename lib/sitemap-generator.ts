@@ -10,7 +10,7 @@ async function getAllRoadmaps() {
 }
 
 export async function generateSitemap() {
-  const baseUrl = 'https://babycollab.com'
+  const baseUrl = 'https://connectruas.com'
   
   // Get all roadmaps
   const roadmaps = await getAllRoadmaps()

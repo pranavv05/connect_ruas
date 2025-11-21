@@ -8,7 +8,7 @@ export default function HelpPage() {
     {
       icon: <BookOpen className="w-6 h-6" />,
       title: "Getting Started",
-      description: "Learn the basics of Baby Collab and how to set up your account.",
+      description: "Learn the basics of ConnectRUAS and how to set up your account.",
       articles: 12
     },
     {
@@ -75,7 +75,7 @@ export default function HelpPage() {
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-foreground mb-6">Help Center</h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-          Find answers to common questions and learn how to get the most out of Baby Collab.
+          Find answers to common questions and learn how to get the most out of ConnectRUAS.
         </p>
         
         <div className="max-w-2xl mx-auto relative">
@@ -135,11 +135,11 @@ export default function HelpPage() {
             <h2 className="text-xl font-bold text-foreground">Community Support</h2>
           </div>
           <p className="text-muted-foreground mb-4">
-            Connect with other Baby Collab users in our community forums. Get help from experienced members 
+            Connect with other ConnectRUAS users in our community forums. Get help from experienced members 
             and share your knowledge with newcomers.
           </p>
           <Link 
-            href="https://www.linkedin.com/company/babyycollabb/?viewAsMember=true" 
+            href="https://www.linkedin.com/company/connectruas/?viewAsMember=true" 
             className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
           >
             Visit Community
@@ -159,7 +159,7 @@ export default function HelpPage() {
             or issues you might have.
           </p>
           <a 
-            href="mailto:contactbabycollab@gmail.com" 
+            href="mailto:contactconnectruas@gmail.com" 
             className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
           >
             Contact Us
