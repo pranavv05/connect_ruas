@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://babycollab.com/sitemap.xml
+
+Host: babycollab.com
+
+
+Hey, just a suggestion from my side that is when someone enters a website
+ they get most of their work done in the main page without going anywhere in the
+  website. My suggestion is that u can make all the search we do in the main page without 
+  us going to the dashboard, it feels a little weird that when u enter a website u tell 
+  them to click dashboard to do their activity that happens in the website. I am trying 
+  to tell is that make the main page functional in the sense add the features of the 
+dashboard to the main show up page. Ya that's it!!!

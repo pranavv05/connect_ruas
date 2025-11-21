@@ -1,0 +1,56 @@
+/* Landing Page Specific Styles */
+.landing-hero {
+  background: linear-gradient(to bottom right, oklch(0.15 0 0), oklch(0.12 0 0));
+  color: oklch(0.98 0 0);
+}
+
+.landing-cta-button {
+  background: oklch(0.65 0.25 195);
+  color: oklch(0.98 0 0);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.landing-cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  background: oklch(0.55 0.25 195);
+}
+
+.landing-feature-card {
+  background: oklch(0.15 0 0);
+  border: 1px solid oklch(0.25 0 0);
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.landing-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-color: oklch(0.65 0.25 195);
+}
+
+.landing-trust-bar {
+  background: oklch(0.18 0 0);
+}
+
+.landing-footer {
+  background: oklch(0.15 0 0);
+  color: oklch(0.65 0 0);
+}
+
+.landing-section {
+  padding: 5rem 1rem;
+}
+
+.landing-gradient-text {
+  background: linear-gradient(135deg, oklch(0.65 0.25 195) 0%, oklch(0.488 0.243 264.376) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

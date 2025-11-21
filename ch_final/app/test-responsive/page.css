@@ -1,0 +1,27 @@
+/* Responsive test page styles */
+.test-responsive-container {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Ensure proper spacing on mobile */
+@media (max-width: 1023px) {
+  .test-responsive-main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .test-responsive-sidebar {
+    transform: translateX(-100%);
+  }
+  
+  .test-responsive-sidebar.open {
+    transform: translateX(0);
+  }
+}
+
+/* Ensure proper spacing on desktop */
+@media (min-width: 1024px) {
+  .test-responsive-main {
+    margin-left: 16rem;
+  }
+}

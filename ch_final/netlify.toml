@@ -1,0 +1,42 @@
+[build]
+  command = "next build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[functions]
+  # Increase timeout for API functions (default is 10 seconds)
+  node_bundler = "esbuild"
+  
+[functions."api/generate-roadmap"]
+  # Increase timeout for roadmap generation (up to 60 seconds)
+  timeout = 60
+
+[functions."api/suggest-roadmaps"]
+  # Increase timeout for roadmap suggestions (up to 60 seconds)
+  timeout = 60
+
+[functions."api/analyze"]
+  # Increase timeout for resume analysis (up to 60 seconds)
+  timeout = 60
+
+[functions."api/resumes"]
+  # Increase timeout for resume operations (up to 30 seconds)
+  timeout = 30
+
+[functions."api/projects"]
+  # Increase timeout for project operations (up to 30 seconds)
+  timeout = 30
+
+[[headers]]
+  # Set default headers for all functions
+  for = "/api/*"
+  [headers.values]
+    X-Function-Timeout = "60"
+
+[dev]
+  # Local development settings
+  command = "next dev"
+  port = 3000
+  targetPort = 3000
