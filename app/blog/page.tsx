@@ -59,7 +59,7 @@ export default function BlogPage() {
       </div>
 
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-foreground mb-6">Baby Collab Blog</h1>
+        <h1 className="text-4xl font-bold text-foreground mb-6">ConnectRUAS Blog</h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
           Insights, tips, and stories to help you accelerate your career journey.
         </p>

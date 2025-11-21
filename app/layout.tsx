@@ -16,46 +16,42 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s – Baby Collab – Career Development Platform",
-    default: "Baby Collab – Build Your Career – Career Development Platform for Students & Professionals",
+    template: "%s – Connect RUAS – Student & Alumni Network",
+    default: "Connect RUAS – Student & Alumni Networking Platform",
   },
   description:
-    "Baby Collab is the ultimate career development platform for college students and early professionals. Create AI-powered career roadmaps, collaborate on projects, build your portfolio, and accelerate your career growth. Join thousands of professionals already using Baby Collab.",
+    "Connect RUAS is the official networking platform for students, alumni, and faculty of Ramaiah University. Build connections, discover opportunities, collaborate on projects, and strengthen the RUAS community.",
   keywords: [
-    "Baby Collab",
-    "career development",
-    "career roadmap",
-    "professional growth",
-    "college students",
-    "early professionals",
-    "AI career planning",
-    "project collaboration",
-    "portfolio builder",
-    "skill tracking",
-    "resume builder",
-    "career advancement",
-    "professional networking"
+    "Connect RUAS",
+    "RUAS",
+    "Ramaiah University",
+    "student alumni network",
+    "college networking",
+    "university collaboration",
+    "campus community",
+    "student opportunities",
+    "alumni connect",
+    "RUAS projects"
   ],
-  authors: [{ name: "Baby Collab Team" }],
-  creator: "Baby Collab",
-  publisher: "Baby Collab",
-  generator: "Next.js",
-  applicationName: "Baby Collab",
-  referrer: "origin-when-cross-origin",
+  authors: [{ name: "Connect RUAS Team" }],
+  creator: "Connect RUAS",
+  publisher: "Ramaiah University of Applied Sciences",
+  applicationName: "Connect RUAS",
   alternates: {
-    canonical: "https://babycollab.com"
+    canonical: "https://connectruas.com",
   },
   openGraph: {
-    title: "Baby Collab – Build Your Career",
-    description: "The ultimate career development platform for college students and early professionals. Create AI-powered career roadmaps, collaborate on projects, and accelerate your career growth.",
-    url: "https://babycollab.com",
-    siteName: "Baby Collab",
+    title: "Connect RUAS – Student and Alumni Network",
+    description:
+      "A campus-first platform that helps students, alumni, and faculty collaborate, connect, and grow together.",
+    url: "https://connectruas.com",
+    siteName: "Connect RUAS",
     images: [
       {
-        url: "https://babycollab.com/og-image.jpg",
+        url: "https://connectruas.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Baby Collab - Career Development Platform"
+        alt: "Connect RUAS – University Networking Platform"
       }
     ],
     locale: "en_US",
@@ -63,26 +59,21 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Baby Collab – Build Your Career",
-    description: "The ultimate career development platform for college students and early professionals.",
-    creator: "@babycollab",
-    images: ["https://babycollab.com/og-image.jpg"],
+    title: "Connect RUAS – Student & Alumni Network",
+    description:
+      "Strengthening the RUAS community with meaningful connections and collaboration.",
+    images: ["https://connectruas.com/og-image.jpg"],
   },
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  verification: {
-    google: "your-google-verification-code",
   },
 }
+
+// ---------------------------------------------------------
+// ROOT LAYOUT
+// With university-themed UI and subtle RUAS colors
+// ---------------------------------------------------------
 
 export default function RootLayout({
   children,
@@ -91,12 +82,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.variable} antialiased font-sans`}>
+      <body
+        className={`${inter.variable} antialiased font-sans bg-[#0B1A33] text-white`}
+      >
         <V0Provider isV0={true}>
           <ClerkProviderWrapper>
             <NavigationWrapper />
             <UserDataCapture />
-            {children}
+
+            <main className="min-h-screen pt-4">
+              {children}
+            </main>
             <Toaster />
             <StructuredData />
           </ClerkProviderWrapper>

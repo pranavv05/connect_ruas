@@ -8,7 +8,7 @@ export default function DocumentationPage() {
     {
       icon: <BookOpen className="w-6 h-6" />,
       title: "Introduction",
-      description: "Learn what Baby Collab is and how it can help you advance your career.",
+      description: "Learn what ConnectRUAS is and how it can help you advance your career.",
       href: "/docs/introduction"
     },
     {
@@ -54,9 +54,9 @@ export default function DocumentationPage() {
       </div>
 
       <div className="mb-12 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Baby Collab Documentation</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">ConnectRUAS Documentation</h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          Everything you need to know about using Baby Collab to accelerate your career.
+          Everything you need to know about using ConnectRUAS to accelerate your career.
         </p>
       </div>
 
@@ -94,7 +94,7 @@ export default function DocumentationPage() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <a 
-            href="https://www.linkedin.com/company/babyycollabb/?viewAsMember=true" 
+            href="https://www.linkedin.com/company/connectruas/?viewAsMember=true" 
             className="bg-muted rounded-lg p-6 text-center hover:bg-primary/10 transition-colors group block"
           >
             <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
@@ -107,7 +107,7 @@ export default function DocumentationPage() {
           </a>
           
           <a 
-            href="https://www.linkedin.com/company/babyycollabb/?viewAsMember=true" 
+            href="https://www.linkedin.com/company/connectruas/?viewAsMember=true" 
             className="bg-muted rounded-lg p-6 text-center hover:bg-primary/10 transition-colors group block"
           >
             <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
@@ -120,7 +120,7 @@ export default function DocumentationPage() {
           </a>
           
           <a 
-            href="mailto:contactbabycollab@gmail.com" 
+            href="mailto:contactconnectruas@gmail.com" 
             className="bg-muted rounded-lg p-6 text-center hover:bg-primary/10 transition-colors group block"
           >
             <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">

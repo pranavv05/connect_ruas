@@ -12,7 +12,7 @@ export default function IntroductionPage() {
           <span>/</span>
           <span className="text-foreground">Introduction</span>
         </nav>
-        <h1 className="text-4xl font-bold text-foreground mb-4">Introduction to Baby Collab</h1>
+        <h1 className="text-4xl font-bold text-foreground mb-4">Introduction to ConnectRUAS</h1>
         <p className="text-xl text-muted-foreground">
           Your all-in-one platform for career development, project collaboration, and skill building.
         </p>
@@ -24,9 +24,9 @@ export default function IntroductionPage() {
             <Lightbulb className="w-6 h-6 text-primary" />
           </div>
           <div>
-            <h2 className="text-2xl font-bold text-foreground mb-2">What is Baby Collab?</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-2">What is ConnectRUAS?</h2>
             <p className="text-muted-foreground">
-              Baby Collab is a comprehensive career development platform designed specifically for college students and early professionals. 
+              ConnectRUAS is a comprehensive career development platform designed specifically for college students and early professionals. 
               We provide the tools and community you need to plan your career, build meaningful projects, and create a standout portfolio.
             </p>
           </div>
@@ -49,7 +49,7 @@ export default function IntroductionPage() {
       </div>
 
       <div className="mb-12">
-        <h2 className="text-3xl font-bold text-foreground mb-6">How Baby Collab Can Help You</h2>
+        <h2 className="text-3xl font-bold text-foreground mb-6">How ConnectRUAS Can Help You</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-card border border-border rounded-xl p-6">
             <div className="flex items-center gap-3 mb-4">
@@ -107,10 +107,10 @@ export default function IntroductionPage() {
             <Target className="w-6 h-6 text-primary" />
           </div>
           <div>
-            <h2 className="text-2xl font-bold text-foreground mb-4">The Story Behind Baby Collab</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-4">The Story Behind ConnectRUAS</h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                Baby Collab was born out of a simple observation: students and early professionals were struggling to navigate their career paths 
+                ConnectRUAS was born out of a simple observation: students and early professionals were struggling to navigate their career paths 
                 in an increasingly complex job market. We noticed that talented individuals were wasting time juggling multiple tools and platforms, 
                 often working in isolation without proper guidance or community support.
               </p>
@@ -123,11 +123,11 @@ export default function IntroductionPage() {
                 resources. We thought, "What if there was a platform where we could do all of this together, with proper tools and guidance?"
               </p>
               <p>
-                After months of research, user interviews, and prototyping, Baby Collab was born. We launched our beta with just 50 users, but 
+                After months of research, user interviews, and prototyping, ConnectRUAS was born. We launched our beta with just 50 users, but 
                 the response was overwhelming. Users were not only building better projects but also forming lasting professional relationships.
               </p>
               <p>
-                Today, Baby Collab serves thousands of users worldwide, helping them land dream jobs, start companies, and build the careers 
+                Today, ConnectRUAS serves thousands of users worldwide, helping them land dream jobs, start companies, and build the careers 
                 they've always wanted. And we're just getting started.
               </p>
             </div>

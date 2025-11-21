@@ -8,7 +8,7 @@ export default function DocsPage() {
     {
       icon: <BookOpen className="w-6 h-6" />,
       title: "Introduction",
-      description: "Learn what Baby Collab is and how it can help you advance your career.",
+      description: "Learn what ConnectRUAS is and how it can help you advance your career.",
       href: "/docs/introduction"
     },
     {
@@ -46,9 +46,9 @@ export default function DocsPage() {
   return (
     <div className="max-w-4xl mx-auto">
       <div className="mb-12 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Baby Collab Documentation</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">ConnectRUAS Documentation</h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          Everything you need to know about using Baby Collab to accelerate your career.
+          Everything you need to know about using ConnectRUAS to accelerate your career.
         </p>
       </div>
 

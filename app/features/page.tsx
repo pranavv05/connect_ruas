@@ -122,7 +122,7 @@ export default function FeaturesPage() {
       <div className="bg-primary/5 border border-primary/20 rounded-xl p-8 text-center">
         <h2 className="text-2xl font-bold text-foreground mb-4">Ready to Get Started?</h2>
         <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-          Join thousands of students and professionals already using Baby Collab to accelerate their careers.
+          Join thousands of students and professionals already using ConnectRUAS to accelerate their careers.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link 

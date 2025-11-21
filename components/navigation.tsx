@@ -112,6 +112,7 @@ export function Navigation() {
               className="rounded-lg" 
             />
             <span className="text-lg sm:text-xl font-bold text-primary truncate">ConnectRUAS</span>
+            <span className="text-lg sm:text-xl font-bold text-primary truncate">ConnectRUAS</span>
           </Link>
           {isMobile && (
             <button 

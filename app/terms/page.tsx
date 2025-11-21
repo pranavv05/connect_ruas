@@ -38,7 +38,7 @@ export default function TermsPage() {
 
         <div className="prose prose-card max-w-none">
           <p className="text-muted-foreground mb-6">
-            These Terms of Service ("Terms") govern your access to and use of the Baby Collab website and services 
+            These Terms of Service ("Terms") govern your access to and use of the ConnectRUAS website and services 
             (collectively, the "Service"). By accessing or using our Service, you agree to be bound by these Terms.
           </p>
 
@@ -87,7 +87,7 @@ export default function TermsPage() {
 
           <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">6. Intellectual Property</h2>
           <p className="text-muted-foreground mb-4">
-            The Service and its original content, features, and functionality are owned by Baby Collab and are protected 
+            The Service and its original content, features, and functionality are owned by ConnectRUAS and are protected 
             by international copyright, trademark, patent, trade secret, and other intellectual property laws.
           </p>
 
@@ -104,7 +104,7 @@ export default function TermsPage() {
 
           <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">9. Limitation of Liability</h2>
           <p className="text-muted-foreground mb-4">
-            To the maximum extent permitted by law, Baby Collab shall not be liable for any indirect, incidental, 
+            To the maximum extent permitted by law, ConnectRUAS shall not be liable for any indirect, incidental, 
             special, consequential, or punitive damages arising out of or related to your use of the Service.
           </p>
 
@@ -125,7 +125,7 @@ export default function TermsPage() {
             If you have any questions about these Terms, please contact us at:
           </p>
           <div className="bg-muted rounded-lg p-4">
-            <p className="text-foreground font-medium">legal@babycollab.com</p>
+            <p className="text-foreground font-medium">legal@connectruas.com</p>
           </div>
         </div>
       </div>

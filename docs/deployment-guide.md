@@ -1,6 +1,6 @@
-# BabyCollab Deployment Guide
+# connectruas Deployment Guide
 
-This guide provides detailed instructions for deploying the BabyCollab application to production on Vercel.
+This guide provides detailed instructions for deploying the connectruas application to production on Vercel.
 
 ## Prerequisites
 
