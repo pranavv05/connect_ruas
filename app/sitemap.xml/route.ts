@@ -1,7 +1,7 @@
 import { type NextRequest } from 'next/server'
 
 export async function GET(request: NextRequest) {
-  const baseUrl = 'https://babycollab.com'
+  const baseUrl = 'https://connectruas.com'
   
   // In a real application, you would fetch dynamic content URLs here
   // For now, we'll return the static sitemap content

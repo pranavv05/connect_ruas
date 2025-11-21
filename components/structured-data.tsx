@@ -7,8 +7,8 @@ export function StructuredData() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "Baby Collab",
-    "url": "https://babycollab.com",
+    "name": "ConnectRUAS",
+    "url": "https://connectruas.com",
     "description": "The ultimate career development platform for college students and early professionals. Create AI-powered career roadmaps, collaborate on projects, and accelerate your career growth.",
     "applicationCategory": "Career Development Platform",
     "operatingSystem": "All",

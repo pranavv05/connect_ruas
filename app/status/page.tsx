@@ -97,7 +97,7 @@ export default function StatusPage() {
     <div className="min-h-screen bg-background ml-64 p-8">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-3xl font-bold text-foreground mb-2">System Status</h1>
-        <p className="text-muted-foreground mb-8">Current status of BabyCollab services</p>
+        <p className="text-muted-foreground mb-8">Current status of connectruas services</p>
         
         <div className="grid gap-6">
           <div className="bg-card border border-border rounded-lg p-6">

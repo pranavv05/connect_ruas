@@ -12,7 +12,7 @@ POST /api/admin
 
 The admin API requires authentication with the following hardcoded credentials:
 
-- **Email**: `admin@babycollab.com`
+- **Email**: `admin@connectruas.com`
 - **Password**: `admin@123456`
 
 ## Request Format
@@ -21,7 +21,7 @@ Send a POST request with the following JSON payload:
 
 ```json
 {
-  "email": "admin@babycollab.com",
+  "email": "admin@connectruas.com",
   "password": "admin@123456"
 }
 ```
@@ -85,7 +85,7 @@ Or using curl:
 curl -X POST http://localhost:3000/api/admin \
   -H "Content-Type: application/json" \
   -d '{
-    "email": "admin@babycollab.com",
+    "email": "admin@connectruas.com",
     "password": "admin@123456"
   }'
 ```

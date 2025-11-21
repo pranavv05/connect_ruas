@@ -1,8 +1,8 @@
-# BabyCollab - Student Collaboration Platform
+# connectruas - Student Collaboration Platform
 
 ## Overview
 
-BabyCollab is a comprehensive platform designed for students to find teammates, collaborate on real-world projects, and build a portfolio that gets them hired. The platform provides tools for project management, roadmap tracking, resume building, and social networking.
+connectruas is a comprehensive platform designed for students to find teammates, collaborate on real-world projects, and build a portfolio that gets them hired. The platform provides tools for project management, roadmap tracking, resume building, and social networking.
 
 ## Features
 
@@ -201,7 +201,7 @@ To view feedback submissions, make a POST request to `/api/admin` with the follo
 
 ```json
 {
-  "email": "admin@babycollab.com",
+  "email": "admin@connectruas.com",
   "password": "admin@123456"
 }
 ```

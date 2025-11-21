@@ -11,8 +11,8 @@ export function LandingNavigation() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <Image src="/logo.jpg" alt="Baby Collab Logo" width={40} height={40} className="rounded-lg" />
-            <span className="text-2xl font-bold text-foreground">Baby Collab</span>
+            <Image src="/logo.jpg" alt="ConnectRUAS Logo" width={40} height={40} className="rounded-lg" />
+            <span className="text-2xl font-bold text-foreground">ConnectRUAS</span>
           </Link>
 
           {/* CTA Buttons */}

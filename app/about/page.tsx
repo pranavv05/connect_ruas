@@ -39,7 +39,7 @@ export default function AboutPage() {
 
       <div className="bg-card border border-border rounded-xl p-8 mb-12">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-foreground mb-6">About Baby Collab</h1>
+          <h1 className="text-4xl font-bold text-foreground mb-6">About  ConnectRUAS</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Empowering the next generation of professionals with the tools, resources, and community they need to succeed.
           </p>
@@ -53,25 +53,36 @@ export default function AboutPage() {
             <h2 className="text-2xl font-bold text-foreground mb-4">Our Story</h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                Baby Collab was born out of a simple observation: students and early professionals were struggling to navigate their career paths 
-                in an increasingly complex job market. We noticed that talented individuals were wasting time juggling multiple tools and platforms, 
-                often working in isolation without proper guidance or community support.
+                ConnectRUAS was created to solve a challenge we’ve all seen on campus: students, alumni, and mentors 
+                were disconnected, even though everyone had something valuable to offer. Students needed guidance, 
+                alumni wanted ways to give back, and mentors were open to helping — but there was no single place 
+                where these connections could naturally happen.
               </p>
+
               <p>
-                Our founders, all former college students who had successfully transitioned into tech careers, realized that there was a gap in 
-                the market for a platform that could bring together career planning, project collaboration, and skill development in one place.
+                Many RUAS students were trying to grow their skills using scattered tools, group chats, and random 
+                resources. Collaboration was happening, but it was fragmented. Finding alumni for career advice, 
+                project partners within departments, or mentors in specific industries was harder than it should have 
+                been.
               </p>
+
               <p>
-                The idea crystallized during a hackathon where our team was working on separate projects but struggling to coordinate and share 
-                resources. We thought, "What if there was a platform where we could do all of this together, with proper tools and guidance?"
+                ConnectRUAS started as a simple idea during a university project discussion: 
+                <strong>“What if RUAS had its own platform where students, alumni, and mentors could find each other, 
+                collaborate, and grow together?”</strong>  
+                A unified ecosystem — built for the RUAS community, by the RUAS community.
               </p>
+
               <p>
-                After months of research, user interviews, and prototyping, Baby Collab was born. We launched our beta with just 50 users, but 
-                the response was overwhelming. Users were not only building better projects but also forming lasting professional relationships.
+                After months of validation with students, faculty, alumni, and club leaders, the platform took shape: 
+                a place where you can explore career paths, join collaborations, discover mentors, and build meaningful 
+                networks that last beyond graduation.
               </p>
+
               <p>
-                Today, Baby Collab serves thousands of users worldwide, helping them land dream jobs, start companies, and build the careers 
-                they've always wanted. And we're just getting started.
+                Today, ConnectRUAS brings together learners, innovators, and professionals across multiple batches and 
+                disciplines — creating opportunities for academic growth, real-world projects, and career advancement 
+                in one integrated space. And this is only the beginning.
               </p>
             </div>
           </div>
