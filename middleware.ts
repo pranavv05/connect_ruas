@@ -7,8 +7,15 @@ const isProtectedRoute = createRouteMatcher([
   '/roadmaps(.*)',
 ]);
 
+const isOnboardingRoute = createRouteMatcher([
+  '/onboarding(.*)',
+]);
+
 export default clerkMiddleware(async (auth, req) => {
   if (isProtectedRoute(req)) await auth.protect();
+  
+  // If user is authenticated but hasn't completed onboarding, redirect to onboarding
+  // Note: Middleware doesn't have access to session claims, so we'll handle this client-side
 });
 
 export const config = {

@@ -30,7 +30,9 @@ model User {
   resumes             Resume[]
   roadmaps            Roadmap[]
   skills              Skill[]
-  
+  // Mentorship relations
+  menteeMentorships   Mentorship[]         @relation("MentorRelation")
+  mentorMentorships   Mentorship[]         @relation("MenteeRelation")
 
   @@map("users")
 }
@@ -295,4 +297,42 @@ model Connection {
   @@unique([userId, platform])
   @@index([userId])
   @@map("connections")
+}
+
+model Mentorship {
+  id          String   @id @default(uuid())
+  mentorId    String   @map("mentor_id")
+  menteeId    String   @map("mentee_id")
+  status      String   @default("pending") // pending, accepted, rejected, ended
+  startDate   DateTime? @map("start_date")
+  endDate     DateTime? @map("end_date")
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+  mentor      User     @relation("MentorRelation", fields: [mentorId], references: [id], onDelete: Cascade)
+  mentee      User     @relation("MenteeRelation", fields: [menteeId], references: [id], onDelete: Cascade)
+  sessions    MentorshipSession[]
+
+  @@unique([mentorId, menteeId])
+  @@index([mentorId])
+  @@index([menteeId])
+  @@index([status])
+  @@map("mentorships")
+}
+
+model MentorshipSession {
+  id           String   @id @default(uuid())
+  mentorshipId String   @map("mentorship_id")
+  scheduledAt  DateTime @map("scheduled_at")
+  duration     Int      // in minutes
+  topic        String
+  notes        String?
+  status       String   @default("scheduled") // scheduled, completed, cancelled
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+  mentorship   Mentorship @relation(fields: [mentorshipId], references: [id], onDelete: Cascade)
+
+  @@index([mentorshipId])
+  @@index([scheduledAt])
+  @@index([status])
+  @@map("mentorship_sessions")
 }

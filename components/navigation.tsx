@@ -4,7 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { SignOutButton, useUser } from "@clerk/nextjs"
-import { LogOut, LayoutDashboard, Map, FolderKanban, FileText, Share2, User, MessageSquare, Menu, X } from "lucide-react"
+import { LogOut, LayoutDashboard, Map, FolderKanban, FileText, Share2, User, MessageSquare, Menu, X, Users } from "lucide-react"
 import { useState, useEffect, useRef } from "react"
 
 export function Navigation() {
@@ -57,10 +57,12 @@ export function Navigation() {
 
   const navItems = [
     { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
+    { href: "/mentorship", label: "Mentorship", icon: Users },
     { href: "/roadmaps", label: "Roadmaps", icon: Map },
     { href: "/projects", label: "Projects", icon: FolderKanban },
     { href: "/resume", label: "Resume", icon: FileText },
     { href: "/profile", label: "Profile", icon: User },
+    { href: "/chat", label: "Chat", icon: MessageSquare },
   ]
 
   return (

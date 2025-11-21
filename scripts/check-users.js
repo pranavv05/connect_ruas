@@ -1,14 +1,20 @@
 const { PrismaClient } = require('@prisma/client');
 
-const prisma = new PrismaClient();
-
 async function checkUsers() {
+  const prisma = new PrismaClient();
+  
   try {
     console.log('Checking users in database...');
     
     // Get a few users to see what we're working with
     const users = await prisma.user.findMany({
-      take: 10
+      take: 10,
+      select: {
+        id: true,
+        email: true,
+        fullName: true,
+        username: true
+      }
     });
     
     console.log(`Found ${users.length} users:`);
@@ -28,6 +34,12 @@ async function checkUsers() {
           { fullName: 'Project Creator' },
           { fullName: 'Project Member' },
         ]
+      },
+      select: {
+        id: true,
+        email: true,
+        fullName: true,
+        username: true
       }
     });
     

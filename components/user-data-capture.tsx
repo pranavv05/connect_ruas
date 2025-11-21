@@ -2,6 +2,7 @@
 
 import { useUser } from "@clerk/nextjs";
 import { useEffect } from "react";
+import { UserTypeModal } from "./user-type-modal";
 
 export function UserDataCapture() {
   const { user, isLoaded } = useUser();
@@ -43,5 +44,5 @@ export function UserDataCapture() {
     }
   }, [isLoaded, user]);
 
-  return null; // This component doesn't render anything
+  return <UserTypeModal />;
 }

@@ -43,21 +43,21 @@ export function StatsGrid() {
         {
           label: "Active Roadmaps",
           value: (data.activeRoadmaps || 0).toString(),
-          description: `${data.roadmapsInProgress || 0} in progress`,
+          description: "Learning paths in progress",
           icon: Target,
-          trend: `+${data.roadmapsInProgress || 0} this month`,
+          trend: `${data.roadmapsInProgress || 0} roadmaps active`,
         },
         {
           label: "Projects",
           value: (data.totalProjects || 0).toString(),
-          description: `${data.projectsCompleted || 0} active collaborations`,
+          description: `${data.projectsInProgress || 0} in progress, ${data.projectsCompleted || 0} completed`,
           icon: Briefcase,
-          trend: `${data.projectsCompleted || 0} completed`,
+          trend: `${data.projectsInProgress || 0} active projects`,
         },
         {
           label: "Skills Learned",
           value: (data.skillsLearned || 0).toString(),
-          description: "Across all roadmaps",
+          description: "Milestones completed",
           icon: Award,
           trend: `+${data.skillsThisMonth || 0} this month`,
         },
@@ -71,7 +71,7 @@ export function StatsGrid() {
       ]
       
       setStats(transformedStats)
-    } catch (err) {
+    } catch (err: any) {
       console.error('Error fetching stats:', err)
       setError(`Failed to load statistics: ${err.message}`)
     } finally {

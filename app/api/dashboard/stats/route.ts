@@ -2,6 +2,57 @@ import { NextResponse } from 'next/server'
 import { getAuth } from '@clerk/nextjs/server'
 import getPrismaClient from '@/lib/db'
 
+// Helper function to safely parse phases data
+function parsePhasesData(phases: any): any[] {
+  if (!phases) return []
+  
+  try {
+    // If it's already an array, return it
+    if (Array.isArray(phases)) {
+      return phases
+    }
+    
+    // If it's a string, try to parse it as JSON
+    if (typeof phases === 'string') {
+      return JSON.parse(phases)
+    }
+    
+    // If it's an object, convert it to an array
+    if (typeof phases === 'object' && phases !== null) {
+      // Check if it's already in the correct format
+      if (phases.id && phases.title && phases.milestones) {
+        return [phases]
+      }
+      
+      // Convert object values to array
+      return Object.values(phases).filter((value: any) => 
+        typeof value === 'object' && value !== null && (value.id || value.title)
+      ) as any[]
+    }
+  } catch (error) {
+    console.error('Error parsing phases data:', error)
+  }
+  
+  return []
+}
+
+// Helper function to count milestones
+function countMilestones(phases: any[]): { total: number; completed: number } {
+  let total = 0
+  let completed = 0
+  
+  phases.forEach(phase => {
+    if (phase && typeof phase === 'object' && Array.isArray(phase.milestones)) {
+      total += phase.milestones.length
+      completed += phase.milestones.filter((m: any) => 
+        m && typeof m === 'object' && m.completed === true
+      ).length
+    }
+  })
+  
+  return { total, completed }
+}
+
 // GET /api/dashboard/stats - Get dashboard statistics for the authenticated user
 export async function GET(req: Request) {
   try {
@@ -72,53 +123,19 @@ export async function GET(req: Request) {
     let totalMilestones = 0
     
     roadmaps.forEach((roadmap: any) => {
-      // Handle phases data - it might be a string or object
-      let phases: any[] = []
-      
-      if (roadmap.phases) {
-        if (typeof roadmap.phases === 'string') {
-          try {
-            phases = JSON.parse(roadmap.phases)
-          } catch (e) {
-            console.error('Error parsing phases string:', e)
-            phases = []
-          }
-        } else if (Array.isArray(roadmap.phases)) {
-          phases = roadmap.phases
-        } else if (typeof roadmap.phases === 'object') {
-          // Handle Prisma JSON objects
-          try {
-            phases = Object.values(roadmap.phases).filter((value: any) => 
-              typeof value === 'object' && value !== null
-            ) as any[]
-          } catch (e) {
-            console.error('Error converting phases object to array:', e)
-            phases = []
-          }
-        }
-      }
-      
+      // Parse phases data properly
+      const phases = parsePhasesData(roadmap.phases)
       console.log(`Roadmap ${roadmap.id} phases:`, JSON.stringify(phases, null, 2))
       
       // Count total and completed milestones
-      let roadmapTotalMilestones = 0
-      let roadmapCompletedMilestones = 0
-      
-      phases.forEach((phase: any) => {
-        if (phase && typeof phase === 'object' && Array.isArray(phase.milestones)) {
-          roadmapTotalMilestones += phase.milestones.length
-          roadmapCompletedMilestones += phase.milestones.filter((m: any) => 
-            m && typeof m === 'object' && m.completed === true
-          ).length
-        }
-      })
+      const { total, completed } = countMilestones(phases)
       
       // Add to totals
-      totalMilestones += roadmapTotalMilestones
-      completedMilestones += roadmapCompletedMilestones
+      totalMilestones += total
+      completedMilestones += completed
       
-      // Only count as active if not fully completed
-      if (roadmapTotalMilestones > 0 && roadmapCompletedMilestones < roadmapTotalMilestones) {
+      // Count as active if it has milestones
+      if (total > 0) {
         activeRoadmaps++
       }
     })
@@ -145,19 +162,25 @@ export async function GET(req: Request) {
     
     const totalProjects = allProjects.length
     
-    // Count project statuses
+    // Count project statuses correctly
     let projectsInProgress = 0
     let projectsCompleted = 0
     
     allProjects.forEach((project: any) => {
-      if (project.status && project.status.toLowerCase() === 'completed') {
+      const status = project.status ? project.status.toLowerCase() : ''
+      
+      // Count as completed only if explicitly marked as completed
+      if (status === 'completed') {
         projectsCompleted++
-      } else if (project.status && project.status.toLowerCase() !== 'planning') {
+      } 
+      // Count as in progress if it's active or in_progress
+      else if (status === 'active' || status === 'in_progress') {
         projectsInProgress++
       }
+      // planning status is not counted as in progress
     })
     
-    // Calculate skills learned from completed milestones
+    // Calculate skills learned (using completed milestones as a proxy)
     const skillsLearned = completedMilestones
     
     // Calculate career progress (0-100%)
@@ -175,48 +198,15 @@ export async function GET(req: Request) {
     )
     
     let recentCompletedMilestones = 0
-    let recentTotalMilestones = 0
     
     recentRoadmaps.forEach((roadmap: any) => {
-      // Handle phases data - it might be a string or object
-      let phases: any[] = []
+      // Parse phases data properly
+      const phases = parsePhasesData(roadmap.phases)
       
-      if (roadmap.phases) {
-        if (typeof roadmap.phases === 'string') {
-          try {
-            phases = JSON.parse(roadmap.phases)
-          } catch (e) {
-            console.error('Error parsing phases string:', e)
-            phases = []
-          }
-        } else if (Array.isArray(roadmap.phases)) {
-          phases = roadmap.phases
-        } else if (typeof roadmap.phases === 'object') {
-          // Handle Prisma JSON objects
-          try {
-            phases = Object.values(roadmap.phases).filter((value: any) => 
-              typeof value === 'object' && value !== null
-            ) as any[]
-          } catch (e) {
-            console.error('Error converting phases object to array:', e)
-            phases = []
-          }
-        }
-      }
-      
-      phases.forEach((phase: any) => {
-        if (phase && typeof phase === 'object' && Array.isArray(phase.milestones)) {
-          recentTotalMilestones += phase.milestones.length
-          recentCompletedMilestones += phase.milestones.filter((m: any) => 
-            m && typeof m === 'object' && m.completed === true
-          ).length
-        }
-      })
+      // Count completed milestones in recent roadmaps
+      const { completed } = countMilestones(phases)
+      recentCompletedMilestones += completed
     })
-    
-    const progressThisMonth = recentTotalMilestones > 0 
-      ? Math.round((recentCompletedMilestones / recentTotalMilestones) * 100)
-      : 0
     
     // Transform the data to match the frontend expectations
     const stats = {
@@ -224,10 +214,11 @@ export async function GET(req: Request) {
       totalProjects: totalProjects,
       skillsLearned: skillsLearned,
       careerProgress: careerProgress,
-      roadmapsInProgress: projectsInProgress,
+      roadmapsInProgress: activeRoadmaps, // All roadmaps with milestones are considered active
       projectsCompleted: projectsCompleted,
+      projectsInProgress: projectsInProgress,
       skillsThisMonth: recentCompletedMilestones,
-      progressThisMonth: progressThisMonth
+      progressThisMonth: careerProgress > 0 ? Math.min(careerProgress, 100) : 0
     }
     
     console.log('Final stats:', JSON.stringify(stats, null, 2))
@@ -236,7 +227,7 @@ export async function GET(req: Request) {
       status: 200,
       headers: cacheHeaders
     })
-  } catch (error) {
+  } catch (error: any) {
     console.error('Error fetching dashboard stats:', error)
     return NextResponse.json({ error: 'Failed to fetch dashboard stats', details: error.message }, { status: 500 })
   }
