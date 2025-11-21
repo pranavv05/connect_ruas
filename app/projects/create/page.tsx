@@ -102,7 +102,7 @@ export default function CreateProjectPage() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-8">
             <Link href="/" className="text-2xl font-bold text-primary">
-              Baby Collab
+              ConnectRUAS
             </Link>
           </div>
           <div className="flex items-center gap-4">

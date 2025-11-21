@@ -18,7 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Optimized API response times
 - Improved client-side component performance
-- Updated README with comprehensive documentation
+- Updated README with comprehensive documentation   
 - Enhanced user creation logic to be more aggressive about updating placeholder data
 - Improved user data updater to fetch real data from Clerk when available
 
@@ -31,7 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2025-10-19
 
 ### Added
-- Initial release of BabyCollab platform
+- Initial release of connectruas platform
 - Dashboard with statistics and project overview
 - Project management system with team collaboration
 - Roadmap tracking for career development
@@ -50,5 +50,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Real-time messaging within projects
 - File sharing capabilities
 
-[Unreleased]: https://github.com/your-org/baby-collab/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/your-org/baby-collab/releases/tag/v1.0.0
+[Unreleased]: https://github.com/pranavv05/connect_ruas
+[1.0.0]: https://github.com/pranavv05/connect_ruas

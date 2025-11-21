@@ -1,6 +1,6 @@
 # Database Setup Guide
 
-This guide explains how to set up the database for the BabyCollab application in both development and production environments.
+This guide explains how to set up the database for the connectruas application in both development and production environments.
 
 ## Database Provider
 
@@ -41,18 +41,18 @@ For quick testing and development, you can use the production database directly:
 
 3. Create a database user (if needed):
    ```sql
-   CREATE USER babycollab WITH PASSWORD 'babycollab';
-   ALTER USER babycollab CREATEDB;
+   CREATE USER connectruas WITH PASSWORD 'connectruas';
+   ALTER USER connectruas CREATEDB;
    ```
 
 4. Create a development database:
    ```sql
-   CREATE DATABASE babycollab_dev OWNER babycollab;
+   CREATE DATABASE connectruas_dev OWNER connectruas;
    ```
 
 5. Update the [.env.local](file:///C:/Users/prana/OneDrive/Desktop/ch_final/.env.local) file with the correct connection string:
    ```
-   DATABASE_URL="postgresql://babycollab:babycollab@localhost:5432/babycollab_dev"
+   DATABASE_URL="postgresql://connectruas:connectruas@localhost:5432/connectruas_dev"
    ```
 
 6. Run the initial migration:

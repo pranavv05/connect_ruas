@@ -9,7 +9,7 @@ export default function ContactPage() {
       icon: <Mail className="w-6 h-6" />,
       title: "Email Us",
       description: "For general inquiries and support",
-      detail: "support@babycollab.com"
+      detail: "support@connectruas.com"
     },
     {
       icon: <Phone className="w-6 h-6" />,
